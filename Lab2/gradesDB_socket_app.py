@@ -130,7 +130,7 @@ class Server:
                     if is_hash:
                         print(f"Received ID/password hash {cleaned} from client.")
                         print("Received hash key from client; verifying...\n")
-                        grades = self.verifyHashKey(grade_df, cleaned)
+                        grades = self.verifyHashKey(self.grade_df, cleaned)
 
                         if grades is not None:
                             print("Correct password, record found.")
@@ -146,31 +146,31 @@ class Server:
 
                     if cmd_in == "GMA":
                         print(f"User requested to Get Midterm Average {cmd_in} \n")
-                        GMA_data = self.calculate_GMA(grade_df)
+                        GMA_data = self.calculate_GMA(self.grade_df)
                         GMA_bytes = str(f"Midterm Average: {GMA_data:.2f}%").encode(Server.MSG_ENCODING)
                         connection.sendall(GMA_bytes)
 
                     elif cmd_in == "GL1A":
                         print(f"User requested to Get Lab 1 Average {cmd_in} \n")
-                        GL1A_data = self.calculate_GL1A(grade_df)
+                        GL1A_data = self.calculate_GL1A(self.grade_df)
                         GL1A_bytes = str(f"Lab 1 Average: {GL1A_data:.2f}%").encode(Server.MSG_ENCODING)
                         connection.sendall(GL1A_bytes)
 
                     elif cmd_in == "GL2A":
                         print(f"User requested to Get Lab 2 Average {cmd_in} \n")
-                        GL2A_data = self.calculate_GL2A(grade_df)
+                        GL2A_data = self.calculate_GL2A(self.grade_df)
                         GL2A_bytes = str(f"Lab 2 Average: {GL2A_data:.2f}%").encode(Server.MSG_ENCODING)
                         connection.sendall(GL2A_bytes)
 
                     elif cmd_in == "GL3A":
                         print(f"User requested to Get Lab 3 Average {cmd_in} \n")
-                        GL3A_data = self.calculate_GL3A(grade_df)
+                        GL3A_data = self.calculate_GL3A(self.grade_df)
                         GL3A_bytes = str(f"Lab 3 Average: {GL3A_data:.2f}%").encode(Server.MSG_ENCODING)
                         connection.sendall(GL3A_bytes)
 
                     elif cmd_in == "GL4A":
                         print(f"User requested to Get Lab 4 Average {cmd_in} \n")
-                        GL4A_data = self.calculate_GL4A(grade_df)
+                        GL4A_data = self.calculate_GL4A(self.grade_df)
                         GL4A_bytes = str(f"Lab 4 Average: {GL4A_data:.2f}%").encode(Server.MSG_ENCODING)
                         connection.sendall(GL4A_bytes)
 
@@ -183,7 +183,7 @@ class Server:
                         else:
                             print(f"User requested to Get Student Grades {cmd_in} \n")
                             print(f"Checking Hash Key...\n")
-                            grades = self.verifyHashKey(grade_df, cleaned)
+                            grades = self.verifyHashKey(self.grade_df, cleaned)
 
                             if grades is not None:
                                 print("Correct password, record found.")
