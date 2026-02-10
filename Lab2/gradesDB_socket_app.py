@@ -5,8 +5,8 @@ Lab 2 Server and Client Socket Application for Grade lookup
 
 By: Group 25 (Shray Patel, Siddh Patel, Umar Javaid)
 
-to create a Client: "python EchoClientServer.py -r client" 
-to create a Server: "python EchoClientServer.py -r server" 
+to create a Client: "python gradesDB_socket_app.py -r client" 
+to create a Server: "python gradesDB_socket_app.py -r server" 
 
 or you can import the module into another file, e.g., 
 import EchoClientServer
@@ -45,6 +45,8 @@ class Server:
     SOCKET_ADDRESS = (HOSTNAME, PORT)
 
     def __init__(self):
+        self.grade_data = 'course_grades.csv'
+        self.grade_df = pd.read_csv(self.grade_data)
         self.create_listen_socket()
         self.process_connections_forever()
 
@@ -61,6 +63,9 @@ class Server:
 
             # Set socket to listen state.
             self.socket.listen(Server.MAX_CONNECTION_BACKLOG)
+            print("Data read from CSV file:")
+            print(self.grade_df.to_string())
+            print()
             print("Listening on port {} ...".format(Server.PORT))
         except Exception as msg:
             print(msg)
@@ -85,11 +90,7 @@ class Server:
     def connection_handler(self, client):
         connection, address_port = client
         print("-" * 72)
-        print("Connection received from {}.".format(address_port))
-
-        grade_data = 'course_grades.csv'
-        grade_df = pd.read_csv(grade_data)
-
+        print("Connection received from {} on port {}.".format(address_port[0], address_port[1]))
 
         while True:
             try:
@@ -127,16 +128,18 @@ class Server:
                 else:
                     # If client sent a raw hash, handle it as a grades lookup.
                     if is_hash:
+                        print(f"Received ID/password hash {cleaned} from client.")
                         print("Received hash key from client; verifying...\n")
                         grades = self.verifyHashKey(grade_df, cleaned)
 
                         if grades is not None:
+                            print("Correct password, record found.")
                             connection.sendall(self.format_grades(grades).encode(Server.MSG_ENCODING))
                         else:
+                            print("Password failure.")
                             error_msg = (f"Login Failed!!! Please Ensure Credentials are correct \n"
                                 f"Echo Message: {recvd_str}")
                             connection.sendall(error_msg.encode(Server.MSG_ENCODING))
-                            print("Invalid Login\n")
                         continue
 
                     print(f"Received {cmd_in} command from client \n")
@@ -183,12 +186,13 @@ class Server:
                             grades = self.verifyHashKey(grade_df, cleaned)
 
                             if grades is not None:
+                                print("Correct password, record found.")
                                 connection.sendall(self.format_grades(grades).encode(Server.MSG_ENCODING))
                             else:
+                                print("Password failure.")
                                 error_msg = (f"Login Failed!!! Please Ensure Credentials are correct \n"
                                     f"Echo Message: {recvd_str}")
                                 connection.sendall(error_msg.encode(Server.MSG_ENCODING))
-                                print("Invalid Login\n")
             except KeyboardInterrupt:
                 print()
                 print("Closing client connection ... ")
@@ -285,8 +289,8 @@ class Client:
     # Set the server hostname to connect to. If the server and client
     # are running on the same machine, we can use the current
     # hostname.
-#    SERVER_HOSTNAME = socket.gethostbyname('localhost')
-    SERVER_HOSTNAME = socket.gethostbyname('')
+    SERVER_HOSTNAME = socket.gethostbyname('localhost')
+    #SERVER_HOSTNAME = socket.gethostbyname('')
 #    SERVER_HOSTNAME = 'localhost'
 
     RECV_BUFFER_SIZE = 1024
@@ -319,15 +323,22 @@ class Client:
             raw = input("Input: ").strip()
             # If user types GG (case-insensitive), prompt for credentials
             if raw.upper() == "GG":
+                print("Command entered: GG")
                 print("User requested to Get Student Grades\n")
                 print("Needs further verification...\n")
-                username, password = self.getLoginCreds()
+                student_id, password = self.getLoginCreds()
+                print(f"ID number {student_id} and password {password} received.")
                 # gethashKey now returns a hex string; store that so connection_send
                 # will send it as text.
-                self.input_text = self.gethashKey(username, password)
+                self.input_text = self.gethashKey(student_id, password)
                 break
             # For any other non-empty input, use it as the command/text
             if raw != "":
+                print(f"Command entered: {raw}")
+                # Check if it's a get average command
+                if raw.upper() in ['GMA', 'GL1A', 'GL2A', 'GL3A', 'GL4A']:
+                    cmd_map = {'GMA': 'Midterm', 'GL1A': 'Lab 1', 'GL2A': 'Lab 2', 'GL3A': 'Lab 3', 'GL4A': 'Lab 4'}
+                    print(f"Fetching {cmd_map[raw.upper()]} average:")
                 self.input_text = raw
                 break
 
@@ -348,6 +359,10 @@ class Client:
                 
     def connection_send(self):
         try:
+            # Check if this is a hash (64 hex characters)
+            if len(self.input_text) == 64 and all(c in string.hexdigits for c in self.input_text):
+                print(f"ID/password hash {self.input_text} sent to server.")
+            
             if isinstance(self.input_text, bytes):
                 self.socket.sendall(self.input_text)
             else:
@@ -381,10 +396,10 @@ class Client:
             sys.exit(1)
 
     def getLoginCreds(self):
-        user_name = input("Enter Username: ")
+        student_id = input("Enter Student ID Number: ")
         password = getpass.getpass("Enter Password: ")
 
-        return user_name, password
+        return student_id, password
     
     def gethashKey(self, username, password):
         encoded_username = username.encode("utf-8")

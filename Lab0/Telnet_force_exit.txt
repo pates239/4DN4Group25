@@ -1,0 +1,586 @@
+No.     Time           Source                Destination           Protocol Length Info
+     20 1.746998800    10.0.0.227            10.0.0.129            TCP      66     49904 → 8023 [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=256 SACK_PERM
+
+Frame 20: Packet, 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface \Device\NPF_{4239DEF9-4994-409A-80EF-E9F64CE286E2}, id 0
+    Section number: 1
+    Interface id: 0 (\Device\NPF_{4239DEF9-4994-409A-80EF-E9F64CE286E2})
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Jan 20, 2026 21:26:54.970878300 Eastern Standard Time
+    UTC Arrival Time: Jan 21, 2026 02:26:54.970878300 UTC
+    Epoch Arrival Time: 1768962414.970878300
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 150.421700 milliseconds]
+    [Time since reference or first frame: 1.746998800 seconds]
+    Frame Number: 20
+    Frame Length: 66 bytes (528 bits)
+    Capture Length: 66 bytes (528 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ip:tcp]
+    Character encoding: ASCII (0)
+    [Coloring Rule Name: TCP SYN/FIN]
+    [Coloring Rule String: tcp.flags & 0x02 || tcp.flags.fin == 1]
+Ethernet II, Src: Intel_d7:ff:5f (28:a4:4a:d7:ff:5f), Dst: Intel_4b:62:66 (60:e3:2b:4b:62:66)
+    Destination: Intel_4b:62:66 (60:e3:2b:4b:62:66)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: Intel_d7:ff:5f (28:a4:4a:d7:ff:5f)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv4 (0x0800)
+    [Stream index: 6]
+Internet Protocol Version 4, Src: 10.0.0.227, Dst: 10.0.0.129
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 52
+    Identification: 0x9521 (38177)
+    010. .... = Flags: 0x2, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 128
+    Protocol: TCP (6)
+    Header Checksum: 0x503f [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 10.0.0.227
+    Destination Address: 10.0.0.129
+    [Stream index: 5]
+Transmission Control Protocol, Src Port: 49904, Dst Port: 8023, Seq: 0, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     21 1.747148000    10.0.0.129            10.0.0.227            TCP      66     8023 → 49904 [SYN, ACK] Seq=0 Ack=1 Win=65535 Len=0 MSS=1460 WS=256 SACK_PERM
+
+Frame 21: Packet, 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface \Device\NPF_{4239DEF9-4994-409A-80EF-E9F64CE286E2}, id 0
+    Section number: 1
+    Interface id: 0 (\Device\NPF_{4239DEF9-4994-409A-80EF-E9F64CE286E2})
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Jan 20, 2026 21:26:54.971027500 Eastern Standard Time
+    UTC Arrival Time: Jan 21, 2026 02:26:54.971027500 UTC
+    Epoch Arrival Time: 1768962414.971027500
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 149.200 microseconds]
+    [Time delta from previous displayed frame: 149.200 microseconds]
+    [Time since reference or first frame: 1.747148000 seconds]
+    Frame Number: 21
+    Frame Length: 66 bytes (528 bits)
+    Capture Length: 66 bytes (528 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ip:tcp]
+    Character encoding: ASCII (0)
+    [Coloring Rule Name: TCP SYN/FIN]
+    [Coloring Rule String: tcp.flags & 0x02 || tcp.flags.fin == 1]
+Ethernet II, Src: Intel_4b:62:66 (60:e3:2b:4b:62:66), Dst: Intel_d7:ff:5f (28:a4:4a:d7:ff:5f)
+    Destination: Intel_d7:ff:5f (28:a4:4a:d7:ff:5f)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: Intel_4b:62:66 (60:e3:2b:4b:62:66)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv4 (0x0800)
+    [Stream index: 6]
+Internet Protocol Version 4, Src: 10.0.0.129, Dst: 10.0.0.227
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 52
+    Identification: 0x693c (26940)
+    010. .... = Flags: 0x2, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 128
+    Protocol: TCP (6)
+    Header Checksum: 0x0000 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 10.0.0.129
+    Destination Address: 10.0.0.227
+    [Stream index: 5]
+Transmission Control Protocol, Src Port: 8023, Dst Port: 49904, Seq: 0, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     22 1.749271500    10.0.0.227            10.0.0.129            TCP      54     49904 → 8023 [ACK] Seq=1 Ack=1 Win=65280 Len=0
+
+Frame 22: Packet, 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{4239DEF9-4994-409A-80EF-E9F64CE286E2}, id 0
+    Section number: 1
+    Interface id: 0 (\Device\NPF_{4239DEF9-4994-409A-80EF-E9F64CE286E2})
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Jan 20, 2026 21:26:54.973151000 Eastern Standard Time
+    UTC Arrival Time: Jan 21, 2026 02:26:54.973151000 UTC
+    Epoch Arrival Time: 1768962414.973151000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 2.123500 milliseconds]
+    [Time delta from previous displayed frame: 2.123500 milliseconds]
+    [Time since reference or first frame: 1.749271500 seconds]
+    Frame Number: 22
+    Frame Length: 54 bytes (432 bits)
+    Capture Length: 54 bytes (432 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ip:tcp]
+    Character encoding: ASCII (0)
+    [Coloring Rule Name: TCP]
+    [Coloring Rule String: tcp]
+Ethernet II, Src: Intel_d7:ff:5f (28:a4:4a:d7:ff:5f), Dst: Intel_4b:62:66 (60:e3:2b:4b:62:66)
+    Destination: Intel_4b:62:66 (60:e3:2b:4b:62:66)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: Intel_d7:ff:5f (28:a4:4a:d7:ff:5f)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv4 (0x0800)
+    [Stream index: 6]
+Internet Protocol Version 4, Src: 10.0.0.227, Dst: 10.0.0.129
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 40
+    Identification: 0x9522 (38178)
+    010. .... = Flags: 0x2, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 128
+    Protocol: TCP (6)
+    Header Checksum: 0x504a [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 10.0.0.227
+    Destination Address: 10.0.0.129
+    [Stream index: 5]
+Transmission Control Protocol, Src Port: 49904, Dst Port: 8023, Seq: 1, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     23 1.750280400    10.0.0.129            10.0.0.227            TCP      122    8023 → 49904 [PSH, ACK] Seq=1 Ack=1 Win=65280 Len=68
+
+Frame 23: Packet, 122 bytes on wire (976 bits), 122 bytes captured (976 bits) on interface \Device\NPF_{4239DEF9-4994-409A-80EF-E9F64CE286E2}, id 0
+    Section number: 1
+    Interface id: 0 (\Device\NPF_{4239DEF9-4994-409A-80EF-E9F64CE286E2})
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Jan 20, 2026 21:26:54.974159900 Eastern Standard Time
+    UTC Arrival Time: Jan 21, 2026 02:26:54.974159900 UTC
+    Epoch Arrival Time: 1768962414.974159900
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 1.008900 milliseconds]
+    [Time delta from previous displayed frame: 1.008900 milliseconds]
+    [Time since reference or first frame: 1.750280400 seconds]
+    Frame Number: 23
+    Frame Length: 122 bytes (976 bits)
+    Capture Length: 122 bytes (976 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ip:tcp]
+    Character encoding: ASCII (0)
+    [Coloring Rule Name: TCP]
+    [Coloring Rule String: tcp]
+Ethernet II, Src: Intel_4b:62:66 (60:e3:2b:4b:62:66), Dst: Intel_d7:ff:5f (28:a4:4a:d7:ff:5f)
+    Destination: Intel_d7:ff:5f (28:a4:4a:d7:ff:5f)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: Intel_4b:62:66 (60:e3:2b:4b:62:66)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv4 (0x0800)
+    [Stream index: 6]
+Internet Protocol Version 4, Src: 10.0.0.129, Dst: 10.0.0.227
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 108
+    Identification: 0x693d (26941)
+    010. .... = Flags: 0x2, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 128
+    Protocol: TCP (6)
+    Header Checksum: 0x0000 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 10.0.0.129
+    Destination Address: 10.0.0.227
+    [Stream index: 5]
+Transmission Control Protocol, Src Port: 8023, Dst Port: 49904, Seq: 1, Ack: 1, Len: 68
+
+No.     Time           Source                Destination           Protocol Length Info
+     24 1.802611000    10.0.0.227            10.0.0.129            TCP      54     49904 → 8023 [ACK] Seq=1 Ack=69 Win=65280 Len=0
+
+Frame 24: Packet, 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{4239DEF9-4994-409A-80EF-E9F64CE286E2}, id 0
+    Section number: 1
+    Interface id: 0 (\Device\NPF_{4239DEF9-4994-409A-80EF-E9F64CE286E2})
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Jan 20, 2026 21:26:55.026490500 Eastern Standard Time
+    UTC Arrival Time: Jan 21, 2026 02:26:55.026490500 UTC
+    Epoch Arrival Time: 1768962415.026490500
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 52.330600 milliseconds]
+    [Time delta from previous displayed frame: 52.330600 milliseconds]
+    [Time since reference or first frame: 1.802611000 seconds]
+    Frame Number: 24
+    Frame Length: 54 bytes (432 bits)
+    Capture Length: 54 bytes (432 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ip:tcp]
+    Character encoding: ASCII (0)
+    [Coloring Rule Name: TCP]
+    [Coloring Rule String: tcp]
+Ethernet II, Src: Intel_d7:ff:5f (28:a4:4a:d7:ff:5f), Dst: Intel_4b:62:66 (60:e3:2b:4b:62:66)
+    Destination: Intel_4b:62:66 (60:e3:2b:4b:62:66)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: Intel_d7:ff:5f (28:a4:4a:d7:ff:5f)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv4 (0x0800)
+    [Stream index: 6]
+Internet Protocol Version 4, Src: 10.0.0.227, Dst: 10.0.0.129
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 40
+    Identification: 0x9523 (38179)
+    010. .... = Flags: 0x2, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 128
+    Protocol: TCP (6)
+    Header Checksum: 0x5049 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 10.0.0.227
+    Destination Address: 10.0.0.129
+    [Stream index: 5]
+Transmission Control Protocol, Src Port: 49904, Dst Port: 8023, Seq: 1, Ack: 69, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     30 3.813007100    10.0.0.227            10.0.0.129            TCP      61     49904 → 8023 [PSH, ACK] Seq=1 Ack=69 Win=65280 Len=7
+
+Frame 30: Packet, 61 bytes on wire (488 bits), 61 bytes captured (488 bits) on interface \Device\NPF_{4239DEF9-4994-409A-80EF-E9F64CE286E2}, id 0
+    Section number: 1
+    Interface id: 0 (\Device\NPF_{4239DEF9-4994-409A-80EF-E9F64CE286E2})
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Jan 20, 2026 21:26:57.036886600 Eastern Standard Time
+    UTC Arrival Time: Jan 21, 2026 02:26:57.036886600 UTC
+    Epoch Arrival Time: 1768962417.036886600
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 168.718100 milliseconds]
+    [Time delta from previous displayed frame: 2.010396100 seconds]
+    [Time since reference or first frame: 3.813007100 seconds]
+    Frame Number: 30
+    Frame Length: 61 bytes (488 bits)
+    Capture Length: 61 bytes (488 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ip:tcp]
+    Character encoding: ASCII (0)
+    [Coloring Rule Name: TCP]
+    [Coloring Rule String: tcp]
+Ethernet II, Src: Intel_d7:ff:5f (28:a4:4a:d7:ff:5f), Dst: Intel_4b:62:66 (60:e3:2b:4b:62:66)
+    Destination: Intel_4b:62:66 (60:e3:2b:4b:62:66)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: Intel_d7:ff:5f (28:a4:4a:d7:ff:5f)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv4 (0x0800)
+    [Stream index: 6]
+Internet Protocol Version 4, Src: 10.0.0.227, Dst: 10.0.0.129
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 47
+    Identification: 0x9524 (38180)
+    010. .... = Flags: 0x2, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 128
+    Protocol: TCP (6)
+    Header Checksum: 0x5041 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 10.0.0.227
+    Destination Address: 10.0.0.129
+    [Stream index: 5]
+Transmission Control Protocol, Src Port: 49904, Dst Port: 8023, Seq: 1, Ack: 69, Len: 7
+
+No.     Time           Source                Destination           Protocol Length Info
+     31 3.813799500    10.0.0.129            10.0.0.227            TCP      73     8023 → 49904 [PSH, ACK] Seq=69 Ack=8 Win=65280 Len=19
+
+Frame 31: Packet, 73 bytes on wire (584 bits), 73 bytes captured (584 bits) on interface \Device\NPF_{4239DEF9-4994-409A-80EF-E9F64CE286E2}, id 0
+    Section number: 1
+    Interface id: 0 (\Device\NPF_{4239DEF9-4994-409A-80EF-E9F64CE286E2})
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Jan 20, 2026 21:26:57.037679000 Eastern Standard Time
+    UTC Arrival Time: Jan 21, 2026 02:26:57.037679000 UTC
+    Epoch Arrival Time: 1768962417.037679000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 792.400 microseconds]
+    [Time delta from previous displayed frame: 792.400 microseconds]
+    [Time since reference or first frame: 3.813799500 seconds]
+    Frame Number: 31
+    Frame Length: 73 bytes (584 bits)
+    Capture Length: 73 bytes (584 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ip:tcp]
+    Character encoding: ASCII (0)
+    [Coloring Rule Name: TCP]
+    [Coloring Rule String: tcp]
+Ethernet II, Src: Intel_4b:62:66 (60:e3:2b:4b:62:66), Dst: Intel_d7:ff:5f (28:a4:4a:d7:ff:5f)
+    Destination: Intel_d7:ff:5f (28:a4:4a:d7:ff:5f)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: Intel_4b:62:66 (60:e3:2b:4b:62:66)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv4 (0x0800)
+    [Stream index: 6]
+Internet Protocol Version 4, Src: 10.0.0.129, Dst: 10.0.0.227
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 59
+    Identification: 0x693e (26942)
+    010. .... = Flags: 0x2, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 128
+    Protocol: TCP (6)
+    Header Checksum: 0x0000 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 10.0.0.129
+    Destination Address: 10.0.0.227
+    [Stream index: 5]
+Transmission Control Protocol, Src Port: 8023, Dst Port: 49904, Seq: 69, Ack: 8, Len: 19
+
+No.     Time           Source                Destination           Protocol Length Info
+     33 3.867333500    10.0.0.227            10.0.0.129            TCP      54     49904 → 8023 [ACK] Seq=8 Ack=88 Win=65280 Len=0
+
+Frame 33: Packet, 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{4239DEF9-4994-409A-80EF-E9F64CE286E2}, id 0
+    Section number: 1
+    Interface id: 0 (\Device\NPF_{4239DEF9-4994-409A-80EF-E9F64CE286E2})
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Jan 20, 2026 21:26:57.091213000 Eastern Standard Time
+    UTC Arrival Time: Jan 21, 2026 02:26:57.091213000 UTC
+    Epoch Arrival Time: 1768962417.091213000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 25.058200 milliseconds]
+    [Time delta from previous displayed frame: 53.534000 milliseconds]
+    [Time since reference or first frame: 3.867333500 seconds]
+    Frame Number: 33
+    Frame Length: 54 bytes (432 bits)
+    Capture Length: 54 bytes (432 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ip:tcp]
+    Character encoding: ASCII (0)
+    [Coloring Rule Name: TCP]
+    [Coloring Rule String: tcp]
+Ethernet II, Src: Intel_d7:ff:5f (28:a4:4a:d7:ff:5f), Dst: Intel_4b:62:66 (60:e3:2b:4b:62:66)
+    Destination: Intel_4b:62:66 (60:e3:2b:4b:62:66)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: Intel_d7:ff:5f (28:a4:4a:d7:ff:5f)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv4 (0x0800)
+    [Stream index: 6]
+Internet Protocol Version 4, Src: 10.0.0.227, Dst: 10.0.0.129
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 40
+    Identification: 0x9525 (38181)
+    010. .... = Flags: 0x2, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 128
+    Protocol: TCP (6)
+    Header Checksum: 0x5047 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 10.0.0.227
+    Destination Address: 10.0.0.129
+    [Stream index: 5]
+Transmission Control Protocol, Src Port: 49904, Dst Port: 8023, Seq: 8, Ack: 88, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     92 5.231712000    10.0.0.227            10.0.0.129            TCP      54     49904 → 8023 [FIN, ACK] Seq=8 Ack=88 Win=65280 Len=0
+
+Frame 92: Packet, 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{4239DEF9-4994-409A-80EF-E9F64CE286E2}, id 0
+    Section number: 1
+    Interface id: 0 (\Device\NPF_{4239DEF9-4994-409A-80EF-E9F64CE286E2})
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Jan 20, 2026 21:26:58.455591500 Eastern Standard Time
+    UTC Arrival Time: Jan 21, 2026 02:26:58.455591500 UTC
+    Epoch Arrival Time: 1768962418.455591500
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 220.665000 milliseconds]
+    [Time delta from previous displayed frame: 1.364378500 seconds]
+    [Time since reference or first frame: 5.231712000 seconds]
+    Frame Number: 92
+    Frame Length: 54 bytes (432 bits)
+    Capture Length: 54 bytes (432 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ip:tcp]
+    Character encoding: ASCII (0)
+    [Coloring Rule Name: TCP SYN/FIN]
+    [Coloring Rule String: tcp.flags & 0x02 || tcp.flags.fin == 1]
+Ethernet II, Src: Intel_d7:ff:5f (28:a4:4a:d7:ff:5f), Dst: Intel_4b:62:66 (60:e3:2b:4b:62:66)
+    Destination: Intel_4b:62:66 (60:e3:2b:4b:62:66)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: Intel_d7:ff:5f (28:a4:4a:d7:ff:5f)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv4 (0x0800)
+    [Stream index: 6]
+Internet Protocol Version 4, Src: 10.0.0.227, Dst: 10.0.0.129
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 40
+    Identification: 0x9526 (38182)
+    010. .... = Flags: 0x2, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 128
+    Protocol: TCP (6)
+    Header Checksum: 0x5046 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 10.0.0.227
+    Destination Address: 10.0.0.129
+    [Stream index: 5]
+Transmission Control Protocol, Src Port: 49904, Dst Port: 8023, Seq: 8, Ack: 88, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     93 5.231944200    10.0.0.129            10.0.0.227            TCP      54     8023 → 49904 [ACK] Seq=88 Ack=9 Win=65280 Len=0
+
+Frame 93: Packet, 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{4239DEF9-4994-409A-80EF-E9F64CE286E2}, id 0
+    Section number: 1
+    Interface id: 0 (\Device\NPF_{4239DEF9-4994-409A-80EF-E9F64CE286E2})
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Jan 20, 2026 21:26:58.455823700 Eastern Standard Time
+    UTC Arrival Time: Jan 21, 2026 02:26:58.455823700 UTC
+    Epoch Arrival Time: 1768962418.455823700
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 232.200 microseconds]
+    [Time delta from previous displayed frame: 232.200 microseconds]
+    [Time since reference or first frame: 5.231944200 seconds]
+    Frame Number: 93
+    Frame Length: 54 bytes (432 bits)
+    Capture Length: 54 bytes (432 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ip:tcp]
+    Character encoding: ASCII (0)
+    [Coloring Rule Name: TCP]
+    [Coloring Rule String: tcp]
+Ethernet II, Src: Intel_4b:62:66 (60:e3:2b:4b:62:66), Dst: Intel_d7:ff:5f (28:a4:4a:d7:ff:5f)
+    Destination: Intel_d7:ff:5f (28:a4:4a:d7:ff:5f)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: Intel_4b:62:66 (60:e3:2b:4b:62:66)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv4 (0x0800)
+    [Stream index: 6]
+Internet Protocol Version 4, Src: 10.0.0.129, Dst: 10.0.0.227
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 40
+    Identification: 0x693f (26943)
+    010. .... = Flags: 0x2, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 128
+    Protocol: TCP (6)
+    Header Checksum: 0x0000 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 10.0.0.129
+    Destination Address: 10.0.0.227
+    [Stream index: 5]
+Transmission Control Protocol, Src Port: 8023, Dst Port: 49904, Seq: 88, Ack: 9, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     94 5.232508100    10.0.0.129            10.0.0.227            TCP      54     8023 → 49904 [FIN, ACK] Seq=88 Ack=9 Win=65280 Len=0
+
+Frame 94: Packet, 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{4239DEF9-4994-409A-80EF-E9F64CE286E2}, id 0
+    Section number: 1
+    Interface id: 0 (\Device\NPF_{4239DEF9-4994-409A-80EF-E9F64CE286E2})
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Jan 20, 2026 21:26:58.456387600 Eastern Standard Time
+    UTC Arrival Time: Jan 21, 2026 02:26:58.456387600 UTC
+    Epoch Arrival Time: 1768962418.456387600
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 563.900 microseconds]
+    [Time delta from previous displayed frame: 563.900 microseconds]
+    [Time since reference or first frame: 5.232508100 seconds]
+    Frame Number: 94
+    Frame Length: 54 bytes (432 bits)
+    Capture Length: 54 bytes (432 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ip:tcp]
+    Character encoding: ASCII (0)
+    [Coloring Rule Name: TCP SYN/FIN]
+    [Coloring Rule String: tcp.flags & 0x02 || tcp.flags.fin == 1]
+Ethernet II, Src: Intel_4b:62:66 (60:e3:2b:4b:62:66), Dst: Intel_d7:ff:5f (28:a4:4a:d7:ff:5f)
+    Destination: Intel_d7:ff:5f (28:a4:4a:d7:ff:5f)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: Intel_4b:62:66 (60:e3:2b:4b:62:66)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv4 (0x0800)
+    [Stream index: 6]
+Internet Protocol Version 4, Src: 10.0.0.129, Dst: 10.0.0.227
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 40
+    Identification: 0x6940 (26944)
+    010. .... = Flags: 0x2, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 128
+    Protocol: TCP (6)
+    Header Checksum: 0x0000 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 10.0.0.129
+    Destination Address: 10.0.0.227
+    [Stream index: 5]
+Transmission Control Protocol, Src Port: 8023, Dst Port: 49904, Seq: 88, Ack: 9, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     95 5.242417600    10.0.0.227            10.0.0.129            TCP      54     49904 → 8023 [ACK] Seq=9 Ack=89 Win=65280 Len=0
+
+Frame 95: Packet, 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface \Device\NPF_{4239DEF9-4994-409A-80EF-E9F64CE286E2}, id 0
+    Section number: 1
+    Interface id: 0 (\Device\NPF_{4239DEF9-4994-409A-80EF-E9F64CE286E2})
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Jan 20, 2026 21:26:58.466297100 Eastern Standard Time
+    UTC Arrival Time: Jan 21, 2026 02:26:58.466297100 UTC
+    Epoch Arrival Time: 1768962418.466297100
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 9.909500 milliseconds]
+    [Time delta from previous displayed frame: 9.909500 milliseconds]
+    [Time since reference or first frame: 5.242417600 seconds]
+    Frame Number: 95
+    Frame Length: 54 bytes (432 bits)
+    Capture Length: 54 bytes (432 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ip:tcp]
+    Character encoding: ASCII (0)
+    [Coloring Rule Name: TCP]
+    [Coloring Rule String: tcp]
+Ethernet II, Src: Intel_d7:ff:5f (28:a4:4a:d7:ff:5f), Dst: Intel_4b:62:66 (60:e3:2b:4b:62:66)
+    Destination: Intel_4b:62:66 (60:e3:2b:4b:62:66)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: Intel_d7:ff:5f (28:a4:4a:d7:ff:5f)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv4 (0x0800)
+    [Stream index: 6]
+Internet Protocol Version 4, Src: 10.0.0.227, Dst: 10.0.0.129
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 40
+    Identification: 0x9527 (38183)
+    010. .... = Flags: 0x2, Don't fragment
+    ...0 0000 0000 0000 = Fragment Offset: 0
+    Time to Live: 128
+    Protocol: TCP (6)
+    Header Checksum: 0x5045 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 10.0.0.227
+    Destination Address: 10.0.0.129
+    [Stream index: 5]
+Transmission Control Protocol, Src Port: 49904, Dst Port: 8023, Seq: 9, Ack: 89, Len: 0
