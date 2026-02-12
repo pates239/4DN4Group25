@@ -6,10 +6,7 @@ Lab 2 Server and Client Socket Application for Grade lookup
 By: Group 25 (Shray Patel, Siddh Patel, Umar Javaid)
 
 to create a Client: "python gradesDB_socket_app.py -r client" 
-to create a Server: "python gradesDB_socket_app.py -r server" 
-
-or you can import the module into another file, e.g., 
-import EchoClientServer
+to create a Server: "python gradesDB_socket_app.py -r server"
 
 """
 
@@ -119,6 +116,7 @@ class Server:
                 # Detect incoming SHA-256 hex digest (client sent credentials hash)
                 is_hash = (len(cleaned) == 64 and all(c in string.hexdigits for c in cleaned))
 
+                # check if command received is valid
                 if (len(cmd_in) < 2 or cmd_in not in validCmd) and not is_hash:
                     error_msg = (f"Invalid Command!!! Please enter one of the following commands: [GMA, GL1A, GL2A, GL3A, GL4A, GG] \n"
                                     f"Echo Message: {recvd_str}")
@@ -144,6 +142,7 @@ class Server:
 
                     print(f"Received {cmd_in} command from client \n")
 
+                    # Get the average based on command given
                     if cmd_in == "GMA":
                         print(f"User requested to Get Midterm Average {cmd_in} \n")
                         GMA_data = self.calculate_GMA(self.grade_df)
@@ -265,20 +264,13 @@ class Server:
         {"-"*72}
         """)
         
-
-
-
-
-        
-
-
-
-
-
     def get_cmd(self, recvd_string):
         # Return up to the first 4 characters so commands like 'GL1A' are captured.
         # Shorter commands such as 'GMA' or 'GG' are unaffected.
         return recvd_string.strip().upper()[:4]
+
+
+
 
 ########################################################################
 # Echo Client class
@@ -291,7 +283,6 @@ class Client:
     # hostname.
     SERVER_HOSTNAME = socket.gethostbyname('localhost')
     #SERVER_HOSTNAME = socket.gethostbyname('')
-#    SERVER_HOSTNAME = 'localhost'
 
     RECV_BUFFER_SIZE = 1024
 
@@ -341,9 +332,6 @@ class Client:
                     print(f"Fetching {cmd_map[raw.upper()]} average:")
                 self.input_text = raw
                 break
-
-
-
     
     def send_console_input_forever(self):
         while True:
