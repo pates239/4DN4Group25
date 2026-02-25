@@ -1,0 +1,51 @@
+UTF-8 Multibyte Test File
+=========================
+
+Latin with accents:
+Café naïve jalapeño año français Göteborg São Tomé
+
+Combining characters (precomposed vs decomposed):
+é é Å Å ñ ñ ö ö
+Zalgo-lite: H̷e̷l̷l̷o̷  t̵e̵s̵t̵
+
+Greek:
+Καλημέρα κόσμε
+
+Cyrillic:
+Привет, мир
+
+Hebrew (RTL):
+שָׁלוֹם עוֹלָם
+
+Arabic (RTL):
+السَّلَامُ عَلَيْكُمْ
+
+Hindi (Devanagari):
+नमस्ते दुनिया
+
+Chinese:
+你好，世界
+
+Japanese:
+こんにちは世界
+
+Korean:
+안녕하세요 세계
+
+Thai:
+สวัสดีชาวโลก
+
+Emoji + ZWJ sequences:
+🙂 😂 🤖 🚀 🌍
+👨‍👩‍👧‍👦  👩🏽‍💻  🧑🏾‍🔬  🏳️‍🌈  🏴‍☠️
+
+Flags (regional indicators):
+🇨🇦 🇺🇸 🇯🇵 🇮🇳 🇧🇷
+
+Math / symbols:
+∑ ∆ √ ∞ ≈ ≠ ≤ ≥ → ← ↔ ⊕ λ π
+
+Currency:
+$ € £ ¥ ₹ ₩ ₿
+
+Line ending check complete.
