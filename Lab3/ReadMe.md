@@ -9,11 +9,7 @@
 Open Terminal 1:
 
 ```bash
-python3 lab3_file_sharing.py server \
-  --shared-dir ./server_share \
-  --sdp-port 30000 \
-  --fsp-port 30001 \
-  --service-name "Shray Team File Sharing Service"
+python3 lab3_file_sharing.py server --shared-dir ./server_share --sdp-port 30000 --fsp-port 30001 --service-name "Shray Team File Sharing Service"
 ```
 
 ## 2. Start a Client
