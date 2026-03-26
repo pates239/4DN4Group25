@@ -6,6 +6,7 @@ import json
 import shlex
 import socket
 import struct
+import sys
 import threading
 from dataclasses import dataclass
 from typing import Optional
@@ -189,6 +190,7 @@ class MulticastChatSession:
 
         mreq = struct.pack("4s4s", socket.inet_aton(self.room.address), socket.inet_aton("0.0.0.0"))
         self.recv_sock.setsockopt(socket.IPPROTO_IP, socket.IP_ADD_MEMBERSHIP, mreq)
+        self.recv_sock.setsockopt(socket.IPPROTO_IP, socket.IP_MULTICAST_LOOP, 0)
 
         self.send_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
         self.send_sock.setsockopt(socket.IPPROTO_IP, socket.IP_MULTICAST_TTL, 1)
@@ -228,12 +230,14 @@ class MulticastChatSession:
             try:
                 data, _ = self.recv_sock.recvfrom(RECV_SIZE)
                 text = data.decode(MSG_ENCODING, errors="replace")
-                print(f"\n{text}")
+                sys.stderr.write(f"{text}\n")
+                sys.stderr.flush()
             except OSError:
                 break
             except Exception as exc:
                 if not self.stop_event.is_set():
-                    print(f"\nChat receive error: {exc}")
+                    sys.stderr.write(f"Chat receive error: {exc}\n")
+                    sys.stderr.flush()
                 break
 
 
@@ -358,10 +362,10 @@ class ChatClient:
             return
 
         if not rooms:
-            print("OK No chat rooms.")
+            print("No chat rooms.")
             return
 
-        print("OK Chat room directory:")
+        print("Chat room directory:")
         for room in rooms:
             print(f"  {room['name']} {room['address']} {room['port']}")
 
